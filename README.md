@@ -5,7 +5,7 @@ The PAL allows Microsoft to identify and recognize partners that have Power Plat
 
 ## To ensure success, follow these two guiding principles:
 
-### 1. Get access from your customer
+### 1. Get access accounts from your customer
 Before you link your partner ID, your customer must give you access to their Production Power Platform or Customer Insights resources. They can use one of the following options:
 
 - **Directory account** - Your customer can create a dedicated user account, or a user account to act as a service account, in their own directory, and provide access to the product(s) you're publishing to Production. If they choose to not grant you access for whatever reason. Ask them to PAL associate the account being used in production so you can get credit.
@@ -14,7 +14,7 @@ Before you link your partner ID, your customer must give you access to their Pro
 ### 2. Solutions
 As a partner, you are required to import your deliverables into the customers production environment via a managed solution. More about solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason you want to use Solutions is because the account used to import Solutions, that account becomes the owner of each deliverable inside the Solution, and the account you use will have the above mentioned PAL Association.
 
-## Linking accounts to your partner ID
+## Linking access accounts to your partner ID (Location, not Global, MPN-ID)
 
 When you have access to either a Production Environment User Account, or Service Account, use the graphical web-based Azure portal to link your Microsoft Partner Network ID (Location MPN ID). For Service Principal or User Account, or Service Account use, PowerShell, or the Azure CLI to provide the link your Microsoft Partner Network ID (Location MPN ID). Link the partner ID to each customer tenant. 
 
