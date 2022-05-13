@@ -32,7 +32,7 @@ Install the [Az.ManagementPartner](https://www.powershellgallery.com/packages/Az
 
 Sign into the customer's tenant with either the user account or the service principal. For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
 
-#### For User/Service Accounts ####
+### PowerShell For User/Service Accounts ###
 ```azurepowershell-interactive
 Update-AzManagementPartner -PartnerId 12345
 ```
@@ -60,6 +60,25 @@ Delete the linked partner ID
 ```azurepowershell-interactive
 remove-AzManagementPartner -PartnerId 12345
 ```
+
+### PowerShell Script for Service Principal ###
+
+```azurepowershell-interactive
+$secretText = #<<YOUR SERVICE PRINCIPAL SECRET GOES HERE-  A GUID>>
+$appId = #<<YOUR SERVICE PRINCIPAL ID aka AppID GOES HERE - A GUID>>
+$tenantId = # <<YOUR TENANT GUID GOES HERE>>
+$MPN_ID = # <<YOUR 7 DIGIT LOCATION MPN-ID GOES HERE - INT>>
+
+# Sign in with newly created Service Principal
+$SecureStringPwd = $secretText | ConvertTo-SecureString -AsPlainText -Force
+$pscredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $appId, $SecureStringPwd
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
+
+# Assign Partner ID -> example 1234567
+New-AzManagementPartner -PartnerId $MPN_ID
+Disconnect-AzAccount
+---
+
 
 ### Use the Azure CLI to link to a new partner ID
 
