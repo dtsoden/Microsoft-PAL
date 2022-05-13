@@ -25,7 +25,7 @@ When you have access to either a Production Environment User Account, or Service
 1. Enter the [Microsoft Partner Network](https://partner.microsoft.com/) ID for your organization. Be sure to use the  **Associated MPN ID**  shown on your partner center profile. It's typically known as your [Partner Location Account MPN ID](/partner-center/account-structure).  
     ![Add Partner ID](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/media/link-partner-id-power-apps-accounts/link-partner-id.png)
 1. To link your partner ID to another customer, switch the directory. Under **Switch directory**, select the appropriate directory.  
-    :::image type="content" source="./media/link-partner-id-power-apps-accounts/switch-directory.png" alt-text="Screenshot showing the Directory + subscription window where can you switch your directory." lightbox="./media/link-partner-id-power-apps-accounts/switch-directory.png" :::
+    ![Switch Directory](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/media/link-partner-id-power-apps-accounts/switch-directory.png)
 
 ### Use PowerShell to link a Service Principal or User Account, or Service Account to your Microsoft Partner Network ID
 
