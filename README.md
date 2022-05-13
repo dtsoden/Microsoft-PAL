@@ -32,6 +32,7 @@ Install the [Az.ManagementPartner](https://www.powershellgallery.com/packages/Az
 
 Sign into the customer's tenant with either the user account or the service principal. For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
 
+#### For User/Service Accounts ####
 ```azurepowershell-interactive
 Update-AzManagementPartner -PartnerId 12345
 ```
