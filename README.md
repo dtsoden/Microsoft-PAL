@@ -6,7 +6,7 @@ The PAL allows Microsoft to identify and recognize partners that have Power Plat
 ## To ensure success, follow these guiding principles:
 
 ### 1. Solutions
-As a partner, you are required to import your deliverables into the customers production environment via a solution. More about solutions can be found here https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview 
+As a partner, you are required to import your deliverables into the customers production environment via a solution. More about solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview)
 
 ### 2. Get access from your customer
 Before you link your partner ID, your customer must give you access to their Production Power Platform or Customer Insights resources. They can use one of the following options:
