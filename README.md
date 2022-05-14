@@ -26,7 +26,7 @@ As a partner, you are required to import your deliverables into the customers Pr
 
 ---
 
-## Linking access accounts to your partner ID (Location, not Global, MPN-ID)
+## Linking access accounts to your partner ID (Location, not Global, MPN-ID), AKA PAL Association.
 
 When you have access to either a Production Environment User Account, or Service Account, use the graphical web-based Azure portal to link your Microsoft Partner Network ID (Location MPN ID). For Service Principal or User Account, or Service Account use, PowerShell, or the Azure CLI to provide the link your Microsoft Partner Network ID (Location MPN ID). Link the partner ID to each customer tenant. 
 
