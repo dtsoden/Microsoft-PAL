@@ -13,7 +13,7 @@ Before you link your partner ID, your customer must give you access to their Pro
 - **Service principal** - Your customer can add an app or script from your organization in their directory and provide access to the product you're working on in production. [Use this accelerator script to assist with the creation, and PAL Association](https://github.com/dtsoden/Microsoft-PAL/blob/main/New-PAL-MPN-ID-ServicePrincipal.ps1) The identity of the app or script is known as a service principal. If they choose to not grant you access for whatever reason. Ask them to PAL associate the Service Principal being used in Production so you can get credit.
 
 ### 2. Solutions
-As a partner, you are required to import your deliverables into the customers production environment via a managed solution. More about solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason you want to use Solutions is because the account used to import Solutions, that account becomes the owner of each deliverable inside the Solution, and the account you use will have the above mentioned PAL Association.
+As a partner, you are required to import your deliverables into the customers Production Environment via a Managed Solution. More about Solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason you want to use Solutions is because the account used to import Solutions, that account becomes the owner of each deliverable inside the Solution, and the account you use will have the above mentioned PAL Association.
 
 *Note: About PowerBI
  > PowerBI reports & Datasets are not published using Solutions.
