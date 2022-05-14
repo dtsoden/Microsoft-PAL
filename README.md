@@ -78,6 +78,8 @@ Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 New-AzManagementPartner -PartnerId $MPN_ID
 Disconnect-AzAccount
 ```
+For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
+
 
 ### Use the Azure CLI to link to a new partner ID For User/Service Accounts
 
