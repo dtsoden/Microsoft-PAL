@@ -16,6 +16,8 @@ Before you link your partner ID, your customer must give you access to their Pro
 As a partner, you are required to import your deliverables into the customers production environment via a managed solution. More about solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason you want to use Solutions is because the account used to import Solutions, that account becomes the owner of each deliverable inside the Solution, and the account you use will have the above mentioned PAL Association.
 
 <p align="center">
+  <p></p>
+  <p></p>
   <img src="https://github.com/dtsoden/Microsoft-PAL/blob/main/images/anatomy.gif">
 </p>
 
