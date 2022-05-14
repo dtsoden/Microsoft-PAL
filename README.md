@@ -79,19 +79,19 @@ Disconnect-AzAccount
 ```
 ---
 
-### Additional maintenance PowerShell commands
-Update the linked partner ID
-```azurepowershell-interactive
-Update-AzManagementPartner -PartnerId 12345
-```
-Get the linked partner ID
+### Additional maintenance PowerShell commands (GET, UPDATE, DELETE) a PAL Association
 
+Get the linked partner ID
 ```azurepowershell-interactive
 get-AzManagementPartner
 ```
 
-Delete the linked partner ID
+Update the linked partner ID
+```azurepowershell-interactive
+Update-AzManagementPartner -PartnerId 12345
+```
 
+Delete the linked partner ID
 ```azurepowershell-interactive
 remove-AzManagementPartner -PartnerId 12345
 ```
