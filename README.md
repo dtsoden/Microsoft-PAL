@@ -17,8 +17,8 @@ As a partner, you are required to import your deliverables into the customers pr
 
 *Note: About PowerBI
  > PowerBI reports & Datasets are not published using Solutions.
- > The act of Publishing from the desktop application determines who owns the report
- > Use [PowerShell to connect Service Principal](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount?view=powerbi-ps) and then [PowerShell to Publish](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.reports/new-powerbireport?view=powerbi-ps)
+ > The act of Publishing from the desktop application determines who owns the report.
+ > Use [PowerShell to connect Service Principal](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount?view=powerbi-ps) and then [PowerShell to Publish](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.reports/new-powerbireport?view=powerbi-ps).
 
 <p align="center">
   <img src="https://github.com/dtsoden/Microsoft-PAL/blob/main/images/anatomy.gif">
