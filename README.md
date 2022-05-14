@@ -3,6 +3,7 @@ Microsoft partners who are Power Platform and Dynamics Customer Insights service
 
 The PAL allows Microsoft to identify and recognize partners that have Power Platform and Customer Insights customers. Microsoft attributes usage to a partner's organization based on the account's permissions (user role) and scope (tenant, resource, and so on). This attribution can be used for Advanced Specializations, such as the [Microsoft Low Code Advanced Specializations](https://partner.microsoft.com/membership/advanced-specialization#tab-content-2), and [Partner Incentives](https://partner.microsoft.com/asset/collection/microsoft-commerce-incentive-resources#/). 
 
+---
 ## To ensure success, follow these two guiding principles:
 
 ### 1. Get access accounts from your customer
@@ -13,6 +14,8 @@ Before you link your partner ID, your customer must give you access to their Pro
 
 ### 2. Solutions
 As a partner, you are required to import your deliverables into the customers production environment via a managed solution. More about solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason you want to use Solutions is because the account used to import Solutions, that account becomes the owner of each deliverable inside the Solution, and the account you use will have the above mentioned PAL Association.
+![]()
+---
 
 ## Linking access accounts to your partner ID (Location, not Global, MPN-ID)
 
