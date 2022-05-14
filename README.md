@@ -63,25 +63,21 @@ remove-AzManagementPartner -PartnerId 12345
 
 ### PowerShell Script for Service Principal ###
 
-```azurepowershell-interactive
+```azurecli-interactive
 $secretText = #<<YOUR SERVICE PRINCIPAL SECRET GOES HERE-  A GUID>>
 $appId = #<<YOUR SERVICE PRINCIPAL ID aka AppID GOES HERE - A GUID>>
 $tenantId = # <<YOUR TENANT GUID GOES HERE>>
 $MPN_ID = # <<YOUR 7 DIGIT LOCATION MPN-ID GOES HERE - INT>>
----
 
-```azurepowershell-interactive
 # Sign in with newly created Service Principal
 $SecureStringPwd = $secretText | ConvertTo-SecureString -AsPlainText -Force
 $pscredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $appId, $SecureStringPwd
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
----
 
-```azurepowershell-interactive
 # Assign Partner ID -> example 1234567
 New-AzManagementPartner -PartnerId $MPN_ID
 Disconnect-AzAccount
----
+```
 
 ### Use the Azure CLI to link to a new partner ID
 
