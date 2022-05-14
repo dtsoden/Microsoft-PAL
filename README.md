@@ -26,42 +26,27 @@ When you have access to either a Production Environment User Account, or Service
 1. To link your partner ID to another customer, switch the directory. Under **Switch directory**, select the appropriate directory.  
     ![Switch Directory](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/media/link-partner-id-power-apps-accounts/switch-directory.png)
 
+***… 
+
 ### Use PowerShell to link a Service Principal or User Account, or Service Account to your Microsoft Partner Network ID
 
 Install the [Az.ManagementPartner](https://www.powershellgallery.com/packages/Az.ManagementPartner/) Azure PowerShell module.
 
 Sign into the customer's tenant with either the user account or the service principal. For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
 
-### PowerShell For User/Service Accounts ###
-```azurepowershell-interactive
-Update-AzManagementPartner -PartnerId 12345
-```
-
 Link to the new partner ID. The partner ID is the [Microsoft Partner Network](https://partner.microsoft.com/) ID for your organization. Be sure to use the **Associated MPN ID**  shown on your partner profile.
 
+***… 
+
+### PowerShell Script Template For User/Service Accounts to ADD new - With Interactive Login ###
+For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
 ```azurepowershell-interactive
+Connect-AzAccount 
 new-AzManagementPartner -PartnerId 12345
+Disconnect-AzAccount
 ```
-
-Get the linked partner ID
-
-```azurepowershell-interactive
-get-AzManagementPartner
-```
-
-Update the linked partner ID
-
-```azurepowershell-interactive
-Update-AzManagementPartner -PartnerId 12345
-```
-
-Delete the linked partner ID
-
-```azurepowershell-interactive
-remove-AzManagementPartner -PartnerId 12345
-```
-
-### PowerShell Script for Service Principal ###
+***… 
+### PowerShell Script Template for Service Principal ###
 For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
 ```azurecli-interactive
 # Setup the script variables
@@ -79,7 +64,26 @@ Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 New-AzManagementPartner -PartnerId $MPN_ID
 Disconnect-AzAccount
 ```
+***…
 
+### Additional maintenance PowerShell commands
+Update the linked partner ID
+```azurepowershell-interactive
+Update-AzManagementPartner -PartnerId 12345
+```
+Get the linked partner ID
+
+```azurepowershell-interactive
+get-AzManagementPartner
+```
+
+Delete the linked partner ID
+
+```azurepowershell-interactive
+remove-AzManagementPartner -PartnerId 12345
+```
+
+***… 
 
 ### Use the Azure CLI to link to a new partner ID For User/Service Accounts
 
