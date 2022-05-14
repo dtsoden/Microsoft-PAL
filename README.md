@@ -124,7 +124,7 @@ Delete the linked partner ID
 az managementpartner delete --partner-id 12345
 ```
 
-
+-----
 ### Next steps
 
 - Read the [Cost Management + Billing FAQ](../cost-management-billing-faq.yml) for questions and answers about linking a partner ID to Power Apps accounts.
