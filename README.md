@@ -64,10 +64,11 @@ remove-AzManagementPartner -PartnerId 12345
 ### PowerShell Script for Service Principal ###
 For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
 ```azurecli-interactive
-$secretText = #<<YOUR SERVICE PRINCIPAL SECRET GOES HERE-  A GUID>>
-$appId = #<<YOUR SERVICE PRINCIPAL ID aka AppID GOES HERE - A GUID>>
-$tenantId = # <<YOUR TENANT GUID GOES HERE>>
-$MPN_ID = # <<YOUR 7 DIGIT LOCATION MPN-ID GOES HERE - INT>>
+# Setup the script variables
+$secretText = #<<YOUR SERVICE PRINCIPAL SECRET GOES HERE>> -  [GUID]
+$appId = #<<YOUR SERVICE PRINCIPAL ID aka AppID GOES HERE>> -  [GUID]
+$tenantId = # <<YOUR TENANT GUID GOES HERE>> -  [GUID]
+$MPN_ID = # <<YOUR 7 DIGIT LOCATION MPN-ID GOES HERE>> -  [INT]
 
 # Sign in with newly created Service Principal
 $SecureStringPwd = $secretText | ConvertTo-SecureString -AsPlainText -Force
