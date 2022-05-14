@@ -79,7 +79,7 @@ New-AzManagementPartner -PartnerId $MPN_ID
 Disconnect-AzAccount
 ```
 
-### Use the Azure CLI to link to a new partner ID
+### Use the Azure CLI to link to a new partner ID For User/Service Accounts
 
 First, install the Azure CLI extension.
 
