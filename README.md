@@ -38,7 +38,7 @@ Link to the new partner ID. The partner ID is the [Microsoft Partner Network](ht
 
 ---
 
-### PowerShell Script Template For User/Service Accounts to ADD new - With Interactive Login ###
+### PowerShell Script Template For User/Service Accounts to ADD new - with interactive login ###
 For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
 ```azurepowershell-interactive
 Connect-AzAccount 
