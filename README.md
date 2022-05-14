@@ -26,7 +26,7 @@ When you have access to either a Production Environment User Account, or Service
 1. To link your partner ID to another customer, switch the directory. Under **Switch directory**, select the appropriate directory.  
     ![Switch Directory](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/media/link-partner-id-power-apps-accounts/switch-directory.png)
 
----… 
+---
 
 ### Use PowerShell to link a Service Principal or User Account, or Service Account to your Microsoft Partner Network ID
 
@@ -36,7 +36,7 @@ Sign into the customer's tenant with either the user account or the service prin
 
 Link to the new partner ID. The partner ID is the [Microsoft Partner Network](https://partner.microsoft.com/) ID for your organization. Be sure to use the **Associated MPN ID**  shown on your partner profile.
 
----… 
+---
 
 ### PowerShell Script Template For User/Service Accounts to ADD new - With Interactive Login ###
 For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
@@ -45,7 +45,7 @@ Connect-AzAccount
 new-AzManagementPartner -PartnerId 12345
 Disconnect-AzAccount
 ```
----… 
+---
 
 ### PowerShell Script Template for Service Principal ###
 For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
@@ -65,7 +65,7 @@ Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 New-AzManagementPartner -PartnerId $MPN_ID
 Disconnect-AzAccount
 ```
----… 
+---
 
 ### Additional maintenance PowerShell commands
 Update the linked partner ID
@@ -84,7 +84,7 @@ Delete the linked partner ID
 remove-AzManagementPartner -PartnerId 12345
 ```
 
----… 
+---
 
 ### Use the Azure CLI to link to a new partner ID For User/Service Accounts
 
