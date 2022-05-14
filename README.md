@@ -28,7 +28,7 @@ When you have access to either a Production Environment User Account, or Service
 
 ---
 
-### Use PowerShell to link a Service Principal or User Account, or Service Account to your Microsoft Partner Network ID
+## Use PowerShell to link a Service Principal or User Account, or Service Account to your Microsoft Partner Network ID
 
 Install the [Az.ManagementPartner](https://www.powershellgallery.com/packages/Az.ManagementPartner/) Azure PowerShell module.
 
@@ -86,7 +86,7 @@ remove-AzManagementPartner -PartnerId 12345
 
 ---
 
-### Use the Azure CLI to link to a new partner ID For User/Service Accounts
+## Use the Azure CLI to link to a new partner ID For User/Service Accounts
 
 First, install the Azure CLI extension.
 
