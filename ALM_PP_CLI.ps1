@@ -1,12 +1,40 @@
-﻿<#
-    
+<#   
+.SYNOPSIS
+Automate the ALM Process by moving a solution between a source and destination environment while allowing for solution versioning 
+
+.DESCRIPTION
+This script requires the use of a Service Principal account and was designed for use with Partner Admin Link (PAL) as it will validate the Service Principal before proceeding with any ALM operation. MAKE SURE that in each environment that the Service Principal account used has the SYSTEM ADMIN ROLE in each of the ENVIRONMENTS (Source/Destination). 
+
+Aditionally this script REQUIRES that you have the Power Platform CLI installed. run the following command in a command prompt "C:\"
+
+    PAC
+
+    Microsoft PowerPlatform CLI
+    Version: 1.14.4+g960f65f
+
+First two lines returned, should be similar to the output as shown above
+
+.INPUTS
+None
+
+.OUTPUTS
+Feedback as to the process. Feedback can come from either PowerShell or the Power Platform CLI
+
+.LINK
+https://docs.microsoft.com/en-us/power-apps/developer/data-platform/powerapps-cli
+
+
+.EXAMPLE
+> ALM_PP_CLI -TenantId <<GUID>> -ApplicationId -ClientSecret -SourceEnvironment <<URL>> -DestinationEnvironment <<URL>> -Solution <<TEXT>> -OnlineVersion << TEXT #.#.#.# >>
+
+.NOTES   
     Title:    ©2022 Microsoft - Partner Application Link, Power Platform CLI
     Platform: Windows PowerShell 5.1 *** DOES NOT SUPPORT POWERSHELL CORE ***
     Author:   David Soden
+    Profile:  https://davidsoden.com
     Modified: 5/2/2022
     Dependency: Power Platform CLI 
     Download: https://aka.ms/PowerAppsCLI  
-
 #>
 [CmdletBinding()]
 Param(
