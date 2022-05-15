@@ -32,7 +32,7 @@ https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerP
 > New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -SecretExpiration (New-TimeSpan -Days 90)  # default is 365 days
 
 .NOTES   
-    Title:    �2022 Microsoft - Partner Application Link, Power Platform Service Principal
+    Title:    ©2022 Microsoft - Partner Application Link, Power Platform Service Principal
     Credit:   Original script adopted from https://pabuildtools.blob.core.windows.net/spn-docs-4133a3fe/New-PAL-MPN-ID-ServicePrincipal.ps1
     Author:   David Soden
     Profile:  https://davidsoden.com
