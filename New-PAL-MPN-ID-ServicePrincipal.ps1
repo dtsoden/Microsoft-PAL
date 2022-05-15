@@ -1,10 +1,42 @@
-<#
-    
-    Title:    �2022 Microsoft - Partner Application Link, Power Platform Service Principal
-    Credit:   Original script adopted from https://pabuildtools.blob.core.windows.net/spn-docs-4133a3fe/New-CrmServicePrincipal.ps1
-    Author:   David Soden
-    Modified: 5/2/2022
+<#   
+.SYNOPSIS
+Add AAD Application and SPN to Power Platform AAD and configure Power Platform to accept the SPN as tenant admin user.
 
+.DESCRIPTION
+This script assists in creating and configuring the ServicePrincipal to be used with
+the Power Platform Command Line Interface (CLI) & Build Tools AzureDevOps task library.
+
+Registers an Application object and corresponding ServicePrincipalName (SPN) with the Power Platform AAD instance.
+This Application is then added as admin user to the Power Platform tenant itself.
+NOTE: This script will prompt *TWICE* with the AAD login dialogs:
+    1. time: to login as admin to the AAD instance associated with the Power Platform tenant
+    2. time: to login as tenant admin to the Power Platform tenant itself
+
+.INPUTS
+None
+
+.OUTPUTS
+Object with Power Platform TenantId, ApplicationId and client secret (in clear text);
+use this triple to configure the AzureDevOps ServiceConnection. Aditionaly a PAL Association will be performed 
+against the MPN_ID provided at runtime
+
+.LINK
+https://docs.microsoft.com/en-us/power-apps/developer/data-platform/powerapps-cli
+https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools
+
+.EXAMPLE
+> New-PAL-MPN-ID-ServicePrincipal -DryRun -MPN_ID 1234567
+> New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 
+> New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -TenantLocation "Europe"
+> New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -AdminUrl "https://admin.services.crm4.dynamics.com"
+> New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -SecretExpiration (New-TimeSpan -Days 90)  # default is 365 days
+
+.NOTES   
+    Title:    �2022 Microsoft - Partner Application Link, Power Platform Service Principal
+    Credit:   Original script adopted from https://pabuildtools.blob.core.windows.net/spn-docs-4133a3fe/New-PAL-MPN-ID-ServicePrincipal.ps1
+    Author:   David Soden
+    Profile:  https://davidsoden.com
+    Modified: 5/2/2022
 #>
 
 [CmdletBinding()]
@@ -95,7 +127,7 @@ ERROR: Required module installed but does not meet minimal required version:
 function connectAAD {
     Write-Host @"
 
-Connecting to AzureAD: Please log in, using your Dynamics365 / Power Platform tenant ADMIN credentials:
+Connecting to AzureAD: Please log in, using your Power Platform / Power Platform tenant ADMIN credentials:
 
 "@
     try {
@@ -232,8 +264,8 @@ Write-Host "Created SPN '$spnDisplayName' with objectId: $spnId"
 
 Write-Host @"
 
-Connecting to Dynamics365 CRM managment API and adding appID to Dynamics365 tenant:
-    Please log in, using your Dynamics365 / Power Platform tenant ADMIN credentials:
+Connecting to Power Platform CRM managment API and adding appID to Power Platform tenant:
+    Please log in, using your Power Platform / Power Platform tenant ADMIN credentials:
 "@
 
 if (!$DryRun) {
@@ -263,14 +295,19 @@ Write-Output $result | Format-List
 Write-host "Now Registering " $spnDisplayName " with MPN-ID " $MPN_ID
 Write-host "Please Wait... "
 
-# Management Partner cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.
-Start-Sleep -Seconds 15
+if (!$DryRun) {
+   
+    # Management Partner cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.
+    Start-Sleep -Seconds 15
 
-# Sign in with newly created Service Principal
-$SecureStringPwd = $secretText | ConvertTo-SecureString -AsPlainText -Force
-$pscredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $appId, $SecureStringPwd
-Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
+    # Sign in with newly created Service Principal
+    $SecureStringPwd = $secretText | ConvertTo-SecureString -AsPlainText -Force
+    $pscredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $appId, $SecureStringPwd
+    Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 
-# Assign Partner ID -> example 2442485
-New-AzManagementPartner -PartnerId $MPN_ID
-Disconnect-AzAccount
+    # Assign Partner ID -> example 2442485
+    New-AzManagementPartner -PartnerId $MPN_ID
+    Disconnect-AzAccount
+} else {
+    Write-Host "If this were not a dry run a PAL Association would have happened for $spnDisplayName " with MPN-ID " $MPN_ID"
+}
