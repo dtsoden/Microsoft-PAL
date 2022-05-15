@@ -63,8 +63,8 @@ Disconnect-AzAccount
 For more information, see [Sign in with PowerShell](/powershell/azure/authenticate-azureps).
 ```azurecli-interactive
 # Setup the script variables
-$secretText = #<<YOUR SERVICE PRINCIPAL SECRET GOES HERE>> -  [GUID]
 $appId = #<<YOUR SERVICE PRINCIPAL ID aka AppID GOES HERE>> -  [GUID]
+$secretText = #<<YOUR SERVICE PRINCIPAL SECRET GOES HERE>> -  [GUID]
 $tenantId = # <<YOUR TENANT GUID GOES HERE>> -  [GUID]
 $MPN_ID = # <<YOUR 7 DIGIT LOCATION MPN-ID GOES HERE>> -  [INT]
 
