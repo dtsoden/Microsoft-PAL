@@ -68,7 +68,7 @@ $appId = #<<YOUR SERVICE PRINCIPAL ID aka AppID GOES HERE>> -  [GUID]
 $tenantId = # <<YOUR TENANT GUID GOES HERE>> -  [GUID]
 $MPN_ID = # <<YOUR 7 DIGIT LOCATION MPN-ID GOES HERE>> -  [INT]
 
-# Sign in with newly created Service Principal
+# Sign in with Service Principal
 $SecureStringPwd = $secretText | ConvertTo-SecureString -AsPlainText -Force
 $pscredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $appId, $SecureStringPwd
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
