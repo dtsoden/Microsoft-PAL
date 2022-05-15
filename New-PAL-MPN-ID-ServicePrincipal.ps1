@@ -309,5 +309,5 @@ if (!$DryRun) {
     New-AzManagementPartner -PartnerId $MPN_ID
     Disconnect-AzAccount
 } else {
-    Write-Host "If this were not a dry run a PAL Association would have happened for $spnDisplayName " with MPN-ID " $MPN_ID"
+    Write-Host "If this were not a dry run a PAL Association would have happened for $spnDisplayName " with MPN-ID " $MPN_ID" -ForegroundColor Black -BackgroundColor Yellow
 }
