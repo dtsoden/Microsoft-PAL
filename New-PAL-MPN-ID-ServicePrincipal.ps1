@@ -25,14 +25,18 @@ https://docs.microsoft.com/en-us/power-apps/developer/data-platform/powerapps-cl
 https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools
 
 .EXAMPLE
-> New-PAL-MPN-ID-ServicePrincipal -DryRun -MPN_ID 1234567
-> New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 
-> New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -TenantLocation "Europe"
-> New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -AdminUrl "https://admin.services.crm4.dynamics.com"
-> New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -SecretExpiration (New-TimeSpan -Days 90)  # default is 365 days
+New-PAL-MPN-ID-ServicePrincipal -DryRun -MPN_ID 1234567
+.EXAMPLE
+New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 
+.EXAMPLE
+New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -TenantLocation "Europe"
+.EXAMPLE
+New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -AdminUrl "https://admin.services.crm4.dynamics.com"
+.EXAMPLE
+New-PAL-MPN-ID-ServicePrincipal -MPN_ID 1234567 -SecretExpiration (New-TimeSpan -Days 90)  # default is 365 days
 
 .NOTES   
-    Title:    ©2022 Microsoft - Partner Application Link, Power Platform Service Principal
+    Title:    Â©2022 Microsoft - Partner Application Link, Power Platform Service Principal
     Credit:   Original script adopted from https://pabuildtools.blob.core.windows.net/spn-docs-4133a3fe/New-PAL-MPN-ID-ServicePrincipal.ps1
     Author:   David Soden
     Profile:  https://davidsoden.com
