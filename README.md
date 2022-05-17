@@ -15,10 +15,13 @@ Before you link your partner ID, your customer must give you access to their Pro
 ### 2. Solutions
 As a partner, you are required to import your deliverables into the customers Production Environment via a Managed Solution. More about Solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason to use Solutions is because the account used to import Solutions becomes the owner of each deliverable inside the Solution. Use the account from (1. Get access accounts from your customer) above, as this will have the required PAL Association.
 
-*Note: About PowerBI
- > PowerBI reports & Datasets are not published using Solutions.
- > The act of Publishing from the desktop application determines who owns the report.
- > Use [PowerShell to connect Service Principal](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount?view=powerbi-ps) and then [PowerShell to Publish](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.reports/new-powerbireport?view=powerbi-ps).
+</br>
+
+> ***Note: PowerBI & Solutions**
+ >> PowerBI Reports & Datasets are not published using Solutions.
+ >> For **User/Service Accounts**, the act of [Publishing from the desktop application](https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-upload-desktop-files) determines who owns the report.
+ >> For **Service Principal** use [PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount?view=powerbi-ps) and then [PowerShell to Publish](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.reports/new-powerbireport?view=powerbi-ps).
+ >> &nbsp;
 
 <p align="center">
   <img src="https://github.com/dtsoden/Microsoft-PAL/blob/main/images/anatomy.gif">
