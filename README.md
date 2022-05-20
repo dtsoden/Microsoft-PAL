@@ -150,7 +150,7 @@ The partner user/guest account that you received from your customer and was link
 | Power BI            | Monthly Active Users (MAU)   | Dataset | The user must be the publisher of the dataset. For more information, see [Publish datasets and reports from Power BI Desktop](/power-bi/create-reports/desktop-upload-desktop-files). In cases of multiple partners being mapped to a single dataset, the user's activity is reviewed to select the 'latest' partner. |
 | Customer Insights | Unified Profiles | Instance | Any active user of an Instance is treated as the attributed user. In cases of multiple partners being mapped to a single Instance, the user's activity is reviewed to select the 'latest' partner |
 
-###Owner / Co-owner Compatibility as a Glance
+### Owner / Co-owner Compatibility as a Glance
 Delivering one or many items, Solutions is the recomended and prefered method of delivery.
 
 
