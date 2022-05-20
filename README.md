@@ -13,7 +13,7 @@ Before you link your partner ID, your customer must give you access to their Pro
 - **Service principal** - Your customer can add an app or script from your organization in their directory and provide access to the product you're working on in production. [Use this accelerator script to assist with the creation, and PAL Association](https://github.com/dtsoden/Microsoft-PAL/blob/main/New-PAL-MPN-ID-ServicePrincipal.ps1) The identity of the app or script is known as a service principal. If they choose to not grant you access for whatever reason. Ask them to PAL associate the Service Principal being used in Production so you can get credit.
 
 ### 2. Solutions
-As a partner, you are required to import your deliverables into the customers Production Environment via a Managed Solution. More about Solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason to use Solutions is because the account used to import Solutions becomes the owner of each deliverable inside the Solution. Use the account from (1. Get access accounts from your customer) above, as this will have the required PAL Association.
+It is strongly recomended to use Solutions to import your deliverables into the customers Production Environment via a Managed Solution. More about Solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason to use Solutions is because the account used to import Solutions becomes the owner of each deliverable inside the Solution. Use the account from (1. Get access accounts from your customer) above, as this will have the required PAL Association.
 
 </br>
 
@@ -138,6 +138,41 @@ Delete the linked partner ID
 ```azurecli-interactive
 az managementpartner delete --partner-id 12345
 ```
+---
+## Attribute your access account to the product resource
+
+The partner user/guest account that you received from your customer and was linked through the Partner Admin Link (PAL) needs to be attributed to the *resource* for Power Platform or Dynamics Customer Insights to count the usage of that specific resource. The user/guest account doesn't need to be associated with a specific Azure subscription for Power Apps, Power Automate, Power BI or D365 Customer Insights. In many cases, it happens automatically, as the partner user is the one creating, editing, and updating the resource. Besides the logic below, the specific programs the PAL link is used for (such as the [Microsoft Low Code Advanced Specializations](https://partner.microsoft.com/membership/advanced-specialization#tab-content-2) or Partner Incentives) may have other requirements such as the resource needing to be in production and associated with paid usage.
+
+| Product           | Primary Metric   | Resource | Attributed User Logic                                                                                                                                                                             |
+|-------------------|------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Power Apps | Monthly Active Users (MAU) | Application |The user must be an owner/co-owner of the application. For more information, see [Share a canvas app with your organization](/powerapps/maker/canvas-apps/share-app). In cases of multiple partners being mapped to a single application, the user's activity is reviewed to select the 'latest' partner. |
+| Power Automate | Monthly Active Users (MAU) | Flow | The user must be the creator of the flow. There can only be one creator so there's no logic for multiple partners.  |
+| Power BI            | Monthly Active Users (MAU)   | Dataset | The user must be the publisher of the dataset. For more information, see [Publish datasets and reports from Power BI Desktop](/power-bi/create-reports/desktop-upload-desktop-files). In cases of multiple partners being mapped to a single dataset, the user's activity is reviewed to select the 'latest' partner. |
+| Customer Insights | Unified Profiles | Instance | Any active user of an Instance is treated as the attributed user. In cases of multiple partners being mapped to a single Instance, the user's activity is reviewed to select the 'latest' partner |
+
+###Owner / Co-owner Compatibility as a Glance
+Delivering one or many items, Solutions is the recomended and prefered method of delivery.
+
+
+This chart shows the compatibility in scope to changing user accounts or dedicated service accounts after the application has been created by a non-PAL associated account to a PAL associated account.
+|Product   |GUI   |PowerShell   |PP CLI   |DevOps + Build Tools   |
+|----------|:----:|:-----------:|:-------:|:----------------------|
+|Power App Canvas|YES|YES|YES|YES|
+|Power App Model Driven|NO|NO|YES|YES|
+|Power Automate|YES|YES|YES|YES|
+|Power BI (Publishing)|NO|YES|NO|NO|
+|Power Virtual Agent|NO|NO|YES|YES|
+
+
+This shows the compatibility in scope to changing a previously assigned using to an Application Registration known as a Service Principal that has a PAL association.
+|Product   |GUI   |PowerShell   |PP CLI   |DevOps + Build Tools   |
+|----------|:----:|:-----------:|:-------:|:----------------------|
+|Power App Canvas|NO|NO|YES|YES|
+|Power App Model Driven|NO|NO|YES|YES|
+|Power Automate|YES|YES|YES|YES|
+|Power BI (Publishing)|NO|YES|NO|NO|
+|Power Virtual Agent|NO|NO|YES|YES|
+
 
 -----
 ### Next steps
