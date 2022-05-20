@@ -152,9 +152,9 @@ The partner user/guest account that you received from your customer and was link
 | Power BI            | Monthly Active Users (MAU)   | Dataset | The user must be the publisher of the dataset. For more information, see [Publish datasets and reports from Power BI Desktop](/power-bi/create-reports/desktop-upload-desktop-files). In cases of multiple partners being mapped to a single dataset, the user's activity is reviewed to select the 'latest' partner. |
 | Customer Insights | Unified Profiles | Instance | Any active user of an Instance is treated as the attributed user. In cases of multiple partners being mapped to a single Instance, the user's activity is reviewed to select the 'latest' partner |
 
-#### Manual WEB GUI & Power Shell with User / Service Accounts Using Solutions Only
+</br>
 
-**Here are the current known limitations:**
+#### Here are the current known limitations:
 
 -	**Canvas Applications:**
     -	Set the PAL associated User or Service Account as the owner or co-owner of the application.
