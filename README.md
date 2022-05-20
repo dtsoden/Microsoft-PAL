@@ -141,6 +141,8 @@ az managementpartner delete --partner-id 12345
 ---
 ## Attribute your access account to the product resource
 
+The use of Solutions negates the need to understand and apply this granualr understanding to each product resource. 
+
 The partner user/guest account that you received from your customer and was linked through the Partner Admin Link (PAL) needs to be attributed to the *resource* for Power Platform or Dynamics Customer Insights to count the usage of that specific resource. The user/guest account doesn't need to be associated with a specific Azure subscription for Power Apps, Power Automate, Power BI or D365 Customer Insights. In many cases, it happens automatically, as the partner user is the one creating, editing, and updating the resource. Besides the logic below, the specific programs the PAL link is used for (such as the [Microsoft Low Code Advanced Specializations](https://partner.microsoft.com/membership/advanced-specialization#tab-content-2) or Partner Incentives) may have other requirements such as the resource needing to be in production and associated with paid usage.
 
 | Product           | Primary Metric   | Resource | Attributed User Logic                                                                                                                                                                             |
@@ -151,27 +153,27 @@ The partner user/guest account that you received from your customer and was link
 | Customer Insights | Unified Profiles | Instance | Any active user of an Instance is treated as the attributed user. In cases of multiple partners being mapped to a single Instance, the user's activity is reviewed to select the 'latest' partner |
 
 #### Manual WEB GUI & Power Shell with User / Service Accounts Using Solutions Only
-This is by far the easiest to implement, but also the least effective for making sure you get proper credit for the work you do on the Power Platform outside of a solution. Here are the following Limitations
 
+**Here are the current known limitations:**
 
--	Canvas Applications:
+-	**Canvas Applications:**
     -	Set the PAL associated User or Service Account as the owner or co-owner of the application.
     -	You can only change the owner via the PowerShell Set-AdminPowerAppOwner
     -	When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
--	Model Driven Applications:
+-	**Model Driven Applications:**
     -	Make sure the app creator has a PAL association
     -	There is NO co-owner option, and you cannot change the owner via the GUI or PowerShell directly 
     -	When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
--	Power Automate:
+-	**Power Automate:**
     -	Make sure the app creator has a PAL association
     -	There is no co-owner option
     -	You can easily change the owner via the web GUI or with the PowerShell Set-AdminFlowOwnerRole
     -	When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
--	Power BI:
+-	**Power BI:**
     -	The act of Publishing to the service sets the owner.
     -	Make sure the user publishing the report has a PAL association
     -	Use PowerShell to publish as any user or Service Account
--	Power Virtual Agents:
+-	**Power Virtual Agents:**
     -	Make sure the Bot creator has a PAL association
     -	You can not change the owner in the GUI or via a PowerShell command
     -	When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
