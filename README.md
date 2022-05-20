@@ -150,7 +150,33 @@ The partner user/guest account that you received from your customer and was link
 | Power BI            | Monthly Active Users (MAU)   | Dataset | The user must be the publisher of the dataset. For more information, see [Publish datasets and reports from Power BI Desktop](/power-bi/create-reports/desktop-upload-desktop-files). In cases of multiple partners being mapped to a single dataset, the user's activity is reviewed to select the 'latest' partner. |
 | Customer Insights | Unified Profiles | Instance | Any active user of an Instance is treated as the attributed user. In cases of multiple partners being mapped to a single Instance, the user's activity is reviewed to select the 'latest' partner |
 
-### Owner / Co-owner Compatibility as a Glance
+#### Manual WEB GUI & Power Shell with User / Service Accounts Using Solutions Only
+This is by far the easiest to implement, but also the least effective for making sure you get proper credit for the work you do on the Power Platform outside of a solution. Here are the following Limitations
+
+
+-	Canvas Applications:
+    -	Set the PAL associated User or Service Account as the owner or co-owner of the application.
+    -	You can only change the owner via the PowerShell Set-AdminPowerAppOwner
+    -	When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
+-	Model Driven Applications:
+    -	Make sure the app creator has a PAL association
+    -	There is NO co-owner option, and you cannot change the owner via the GUI or PowerShell directly 
+    -	When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
+-	Power Automate:
+    -	Make sure the app creator has a PAL association
+    -	There is no co-owner option
+    -	You can easily change the owner via the web GUI or with the PowerShell Set-AdminFlowOwnerRole
+    -	When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
+-	Power BI:
+    -	The act of Publishing to the service sets the owner.
+    -	Make sure the user publishing the report has a PAL association
+    -	Use PowerShell to publish as any user or Service Account
+-	Power Virtual Agents:
+    -	Make sure the Bot creator has a PAL association
+    -	You can not change the owner in the GUI or via a PowerShell command
+    -	When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
+
+#### Owner / Co-owner Compatibility as a Glance
 Delivering one or many items, Solutions is the recomended and prefered method of delivery.
 
 
@@ -172,7 +198,6 @@ This shows the compatibility in scope to changing a previously assigned using to
 |Power Automate|YES|YES|YES|YES|
 |Power BI (Publishing)|NO|YES|NO|NO|
 |Power Virtual Agent|NO|NO|YES|YES|
-
 
 -----
 ### Next steps
