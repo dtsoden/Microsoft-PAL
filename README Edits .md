@@ -6,9 +6,9 @@ The PAL allows Microsoft to identify and recognize partners that have Power Plat
 
 The following sections explain in more detail how to
 
-1. [Get access accounts from your customer](#anchortext)
-2. [Link your access account to your partner ID]()
-3. [Attribute your access account to the product resource]()  
+1. [Get access accounts from your customer](#access)
+2. [Link your access account to your partner ID](#link)
+3. [Attribute your access account to the product resource](#attrib)  
 
 To ensure success, it is strongly recommended to use Solutions where available to import your deliverables into the customers Production Environment via a Managed Solution. When using Solutions, the account used to import the Solution becomes the owner of each deliverable inside the Solution. Linking that account to your partner ID ensures all deliverables inside the Solution are associated to your partner ID.
 
@@ -16,7 +16,7 @@ To ensure success, it is strongly recommended to use Solutions where available t
 
 ---
 
-## <a name="anchortext" />Get access accounts from your customer
+## <a name="access" />Get access accounts from your customer
 
 Before you link your partner ID, your customer must give you access to their Production Power Platform or Customer Insights resources. They can use one of the following options:
 
@@ -37,7 +37,7 @@ It is strongly recommended to use Solutions to import your deliverables into the
 
 ---
 
-## Linking access accounts to your partner ID (Location, not Global, MPN-ID), AKA PAL Association
+## <a name="link" />Linking access accounts to your partner ID (Location, not Global, MPN-ID), AKA PAL Association
 
 When you have access to either a Production Environment User Account, or Service Account, use the graphical web-based Azure portal to link to your Microsoft Partner Network ID (Location MPN ID). For Service Principal or User Account, or Service Account use, PowerShell, or the Azure CLI to provide the link your Microsoft Partner Network ID (Location MPN ID). Link the partner ID to each customer tenant.
 
@@ -159,7 +159,7 @@ az managementpartner delete --partner-id 12345
 
 ---
 
-## Attribute your access account to the product resource
+## <a name="attrib" />Attribute your access account to the product resource
 
 The use of Solutions negates the need to understand and apply this granular understanding to each product resource.
 
