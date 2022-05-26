@@ -27,9 +27,9 @@ Before you link your partner ID, your customer must give you access to their Pro
 
 ---
 
-## <a name="link" />Linking access accounts to your partner ID (Location, not Global, MPN-ID), AKA PAL Association
+## <a name="link" />Linking access accounts to your partner ID (AKA PAL Association)
 
-When you have access to either a Production Environment User Account, or Service Account, use the graphical web-based Azure portal to link to your Microsoft Partner Network ID (Location MPN ID). For Service Principal or User Account, or Service Account use, PowerShell, or the Azure CLI to provide the link your Microsoft Partner Network ID (Location MPN ID). Link the partner ID to each customer tenant.
+When you have access to either a Production Environment User Account, or Service Account, use the graphical web-based Azure portal to link to your Microsoft Partner Network ID (Location MPN ID). For Service Principal or User Account, or Service Account use, PowerShell, or the Azure CLI to provide the link your Microsoft Partner Network ID (Location MPN ID). Link the partner ID to each customer resource.
 
 ### Use the Azure portal to link a User Account, or Service Account to your Microsoft Partner Network ID
 
@@ -151,9 +151,9 @@ az managementpartner delete --partner-id 12345
 
 ## <a name="attrib" />Attribute your access account to the product resource
 
-The use of Solutions negates the need to understand and apply this granular understanding to each product resource.
+The use of Solutions negates the need to understand and apply this granular understanding to each product resource where relevant. However, if you choose to not use Solutions (not recommended), follow the guidance below:
 
-The partner user/guest account that you received from your customer and was linked through the Partner Admin Link (PAL) needs to be attributed to the _resource_ for Power Platform or Dynamics Customer Insights to count the usage of that specific resource. The user/guest account doesn't need to be associated with a specific Azure subscription for Power Apps, Power Automate, Power BI or D365 Customer Insights. In many cases, it happens automatically, as the partner user is the one creating, editing, and updating the resource. Besides the logic below, the specific programs the PAL link is used for (such as the [Microsoft Low Code Advanced Specializations](https://partner.microsoft.com/membership/advanced-specialization#tab-content-2) or Partner Incentives) may have other requirements such as the resource needing to be in production and associated with paid usage.
+The partner user/guest account that you received from your customer and was linked through the Partner Admin Link (PAL) needs to be attributed to the _resource_ for Power Platform or Dynamics Customer Insights to count the usage of that specific resource. The user/guest account doesn't need to be associated with a specific Azure subscription for Power Apps, Power Automate, Power BI or or Dynamics 365 Customer Insights. In many cases, it happens automatically, as the partner user is the one creating, editing, and updating the resource. Besides the logic below, the specific programs the PAL link is used for (such as the [Microsoft Low Code Advanced Specializations](https://partner.microsoft.com/membership/advanced-specialization#tab-content-2) or Partner Incentives) may have other requirements such as the resource needing to be in production and associated with paid usage.
 
 | Product | Primary Metric | Resource | Attributed User Logic |
 | --- | --- | --- | --- |
@@ -173,8 +173,7 @@ The partner user/guest account that you received from your customer and was link
   * There is NO co-owner option, and you cannot change the owner via the GUI or PowerShell directly.
   * When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
 * **Power Automate:**
-  * Make sure the app creator has a PAL association
-  * There is no co-owner option
+  * Make sure the flow creator has a PAL association
   * You can easily change the owner via the web GUI or with the PowerShell Set-AdminFlowOwnerRole
   * When inside of a solution, and imported into another environment, the importing entity becomes the new owner.
 * **Power BI:**
@@ -216,4 +215,4 @@ This shows the compatibility in scope to changing a previously assigned user acc
 
 * Read the [Cost Management + Billing FAQ](../cost-management-billing-faq.yml) for questions and answers about linking a partner ID to Power Apps accounts.
 * Join the discussion in the [Microsoft Partner Community](https://aka.ms/PALdiscussion) to receive updates or send feedback.
-* Read the [Low Code Application Development advanced specialization FAQ](https://assetsprod.microsoft.com/mpn/faq-low-code-app-development-advanced-specialization.pdf) for PAL-based Power Apps association for Low code application development advanced specialization.
+* View additional assets (including PAL) on the [Partner Learning path](https://partner.microsoft.com/cs-cz/training/assets/#/).
