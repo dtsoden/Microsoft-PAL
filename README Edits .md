@@ -6,7 +6,7 @@ The PAL allows Microsoft to identify and recognize partners that have Power Plat
 
 The following sections explain in more detail how to
 
-1. [Get access accounts from your customer](##Get-access-accounts-from-your-customer)
+1. [Get access accounts from your customer](#)
 2. [Link your access account to your partner ID]()
 3. [Attribute your access account to the product resource]()  
 
@@ -16,7 +16,7 @@ To ensure success, it is strongly recommended to use Solutions where available t
 
 ---
 
-## Get access accounts from your customer
+## <a name="anchortext" />Get access accounts from your customer
 
 Before you link your partner ID, your customer must give you access to their Production Power Platform or Customer Insights resources. They can use one of the following options:
 
