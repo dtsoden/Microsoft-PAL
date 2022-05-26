@@ -1,21 +1,29 @@
 # Link a partner ID to Power Platform and Dynamics Customer Insights accounts
 
-Microsoft partners who are Power Platform and Dynamics Customer Insights service providers can associate their service to customers on Microsoft Power Apps, Power Automate, Power BI and Dynamics Customer Insights. You have access to your customer's environment when you, the Microsoft partner, manage, configure, and support Power Platform and Customer Insights resources for your customer. You can use a Directory Account (User / Service), or a Service Principal. Use these Azure credentials plus a location MPN-ID to create the Partner Admin Link (PAL). This will associate your partner network ID (the **location** MPN-ID mentioned earlier) with the Azure credential used for service delivery in your customers' production environments.
+Microsoft partners who are Power Platform and Dynamics Customer Insights service providers work with their customers to manage, configure and support Power Platform and Customer Insights resources. In order to get credit for these services, you can associate your partner network ID with the Azure credential used for service delivery in your customers’ production environments using Partner Admin Link (PAL).
 
 The PAL allows Microsoft to identify and recognize partners that have Power Platform and Customer Insights customers. Microsoft attributes usage to a partner's organization based on the account's permissions (user role) and scope (tenant, resource, and so on). This attribution can be used for Advanced Specializations, such as the [Microsoft Low Code Advanced Specializations](https://partner.microsoft.com/membership/advanced-specialization#tab-content-2), and [Partner Incentives](https://partner.microsoft.com/asset/collection/microsoft-commerce-incentive-resources#/).
 
+The following sections explain in more detail how to
+
+1. [Get access accounts from your customer](##Get-access-accounts-from-your-customer)
+2. [Link your access account to your partner ID]()
+3. [Attribute your access account to the product resource]()  
+
+To ensure success, it is strongly recommended to use Solutions where available to import your deliverables into the customers Production Environment via a Managed Solution. When using Solutions, the account used to import the Solution becomes the owner of each deliverable inside the Solution. Linking that account to your partner ID ensures all deliverables inside the Solution are associated to your partner ID.
+
+> *Note: Solutions are not available for Power BI and Customer Insights. See detailed sections below. 
+
 ---
 
-## To ensure success, follow these two guiding principles
-
-### 1\. Get access accounts from your customer
+## Get access accounts from your customer
 
 Before you link your partner ID, your customer must give you access to their Production Power Platform or Customer Insights resources. They can use one of the following options:
 
 * **Directory account** - Your customer can create a dedicated user account, or a user account to act as a service account, in their own directory, and provide access to the product(s) you're publishing to Production. If they choose not to grant you access for whatever reason. Ask them to PAL associate with the account being used in production so you can get credit.
 * **Service principal** - Your customer can add an app or script from your organization in their directory and provide access to the product you're working on in production. [Use this accelerator script to assist with the creation, and PAL Association](https://github.com/dtsoden/Microsoft-PAL/blob/main/New-PAL-MPN-ID-ServicePrincipal.ps1) The identity of the app or script is known as a service principal. If they choose not to grant you access for whatever reason. Ask them to PAL associate the Service Principal being used in Production so you can get credit.
 
-### 2\. Solutions
+## Solutions
 
 It is strongly recommended to use Solutions to import your deliverables into the customers' production environment via a Managed Solution. More about Solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason to use Solutions is because the account used to import Solutions becomes the owner of each deliverable inside the Solution. Use the account from (1. Get access accounts from your customer) above, as this will have the required PAL Association.
 
