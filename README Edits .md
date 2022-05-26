@@ -20,20 +20,10 @@ To ensure success, it is strongly recommended to use Solutions where available t
 
 Before you link your partner ID, your customer must give you access to their Production Power Platform or Customer Insights resources. They can use one of the following options:
 
-* **Directory account** - Your customer can create a dedicated user account, or a user account to act as a service account, in their own directory, and provide access to the product(s) you're publishing to Production. If they choose not to grant you access for whatever reason. Ask them to PAL associate with the account being used in production so you can get credit.
-* **Service principal** - Your customer can add an app or script from your organization in their directory and provide access to the product you're working on in production. [Use this accelerator script to assist with the creation, and PAL Association](https://github.com/dtsoden/Microsoft-PAL/blob/main/New-PAL-MPN-ID-ServicePrincipal.ps1) The identity of the app or script is known as a service principal. If they choose not to grant you access for whatever reason. Ask them to PAL associate the Service Principal being used in Production so you can get credit.
+* **Directory account** - Your customer can create a dedicated user account, or a user account to act as a service account, in their own directory, and provide access to the product(s) you're publishing to Production.
+* **Service principal** - Your customer can add an app or script from your organization in their directory and provide access to the product you're working on in production. [Use this accelerator script to assist with the creation, and PAL Association](https://github.com/dtsoden/Microsoft-PAL/blob/main/New-PAL-MPN-ID-ServicePrincipal.ps1) The identity of the app or script is known as a service principal. 
 
-## Solutions
-
-It is strongly recommended to use Solutions to import your deliverables into the customers' production environment via a Managed Solution. More about Solutions can be found here [Solutions overview](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). The reason to use Solutions is because the account used to import Solutions becomes the owner of each deliverable inside the Solution. Use the account from (1. Get access accounts from your customer) above, as this will have the required PAL Association.
-
-> \***Note: PowerBI & Solutions**
->
-> > PowerBI Reports & Datasets are not published using Solutions.  
-> > For **User/Service Accounts**, the act of [Publishing from the desktop application](https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-upload-desktop-files) determines who owns the report.  
-> > For **Service Principal** use [PowerShell to Authenticate,](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount?view=powerbi-ps) then [PowerShell to Publish](https://docs.microsoft.com/en-us/powershell/module/microsoftpowerbimgmt.reports/new-powerbireport?view=powerbi-ps).  
-
-![PAL Anatomy Success](https://github.com/dtsoden/Microsoft-PAL/raw/main/images/anatomy.gif)
+![PAL Anatomy Success](https://raw.githubusercontent.com/dtsoden/Microsoft-PAL/main/images/Picture1.png)
 
 ---
 
