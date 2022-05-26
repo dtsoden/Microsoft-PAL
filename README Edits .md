@@ -6,7 +6,7 @@ The PAL allows Microsoft to identify and recognize partners that have Power Plat
 
 The following sections explain in more detail how to
 
-1. [Get access accounts from your customer](#)
+1. [Get access accounts from your customer](#anchortext)
 2. [Link your access account to your partner ID]()
 3. [Attribute your access account to the product resource]()  
 
