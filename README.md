@@ -190,7 +190,8 @@ The partner user/guest account that you received from your customer and was link
 
 #### Owner / Co-owner Compatibility as a Glance
 
-Delivering one or many items, Solutions is the recommended and preferred method of delivery.
+*Delivering one or many items?* 
+We must strongly recommend Solutions as the method of owner change; this is because of the unfortunate lack of features across the Power Platform to support ownership changes directly against individual assets.
 
 This chart shows the compatibility in scope to changing user accounts or dedicated service accounts after the application has been created by a non-PAL associated account to a PAL associated account.
 
