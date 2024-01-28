@@ -193,15 +193,26 @@ The partner user/guest account that you received from your customer and was link
 *Delivering one or many items?* 
 We must strongly recommend Solutions as the method of owner change; this is because of the unfortunate lack of features across the Power Platform to support ownership changes directly against individual assets.
 
-This chart shows the compatibility in scope to changing user accounts or dedicated service accounts after the application has been created by a non-PAL associated account to a PAL associated account.
+Can you change the owner of an object directly outside of a solution?
+
+| Product | GUI | PowerShell | PP CLI | DevOps + Build Tools |
+| --- | --- | --- | --- | --- |
+| Power App Canvas | YES | YES | NO | NO |
+| Power App Model Driven | NO | NO | NO | NO |
+| Power Automate | YES | YES | NO | NO |
+| Power BI (Publishing) | NO | YES | NO | NO |
+| Power Virtual Agent | NO | NO | NO | NO |
+
+Can you change the owner of an objects contained inside of a solution by importing said Solution? In other words the person inporting the Solution becomes the new owner of all objects inside of the soluiton.
 
 | Product | GUI | PowerShell | PP CLI | DevOps + Build Tools |
 | --- | --- | --- | --- | --- |
 | Power App Canvas | YES | YES | YES | YES |
-| Power App Model Driven | NO | NO | YES | YES |
+| Power App Model Driven | YES | NO | YES | YES |
 | Power Automate | YES | YES | YES | YES |
 | Power BI (Publishing) | NO | YES | NO | NO |
-| Power Virtual Agent | NO | NO | YES | YES |
+| Power Virtual Agent | YES | NO | YES | YES |
+
 
 This shows the compatibility in scope to changing a previously assigned user account to an Application Registration known as a Service Principal that has a PAL association.
 
