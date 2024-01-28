@@ -214,7 +214,7 @@ Can you change the owner of an objects contained inside of a solution by importi
 | Power Virtual Agent | YES | NO | YES | YES |
 
 
-This shows the compatibility in scope to changing a previously assigned user account to an Application Registration known as a Service Principal that has a PAL association.
+This shows the compatibility in scope to changing a previously assigned user account to an Application Registration known as a Service Principal that has a PAL association and is inside of a Solution.
 
 | Product | GUI | PowerShell | PP CLI | DevOps + Build Tools |
 | --- | --- | --- | --- | --- |
